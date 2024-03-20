@@ -14,6 +14,7 @@ exports.up = function (knex) {
         table.string("address").notNullable();
         table.string("zip_code").notNullable();
         table.string("city").notNullable();
+        // table.boolean("active").notNullable().defaultTo(true);
         table.timestamp("created_at").defaultTo(knex.fn.now());
       });
     }
